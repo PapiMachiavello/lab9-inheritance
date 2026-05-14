@@ -1,11 +1,4 @@
-// ─────────────────────────────────────────────────────────────
-//  Character.java  —  ЭЦЭГ КЛАСС (АЛЬ ХЭДИЙН БИЧСЭН)
-//  Энэ файлыг өөрчлөхгүй!
-//  Warrior, Mage, Rogue класснууд энэ классаас extends хийнэ.
-// ─────────────────────────────────────────────────────────────
-
 public class Character {
-
     protected String name;
     protected int hp;
     protected int maxHp;
@@ -20,17 +13,9 @@ public class Character {
         this.maxMp = 50;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public int getMp() {
-        return mp;
-    }
+    public String getName() { return name; }
+    public int getHp() { return hp; }
+    public int getMp() { return mp; }
 
     public void takeDamage(int amount) {
         this.hp = Math.max(0, this.hp - amount);
@@ -38,6 +23,6 @@ public class Character {
 
     @Override
     public String toString() {
-        return "⚔️ " + name + " [HP: " + hp + "/" + maxHp + ", MP: " + mp + "/" + maxMp + "]";
+        return "⚔️ [" + name + "] [HP: " + hp + "/" + maxHp + ", MP: " + mp + "/" + maxMp + "]";
     }
 }
